@@ -1,0 +1,184 @@
+/* ===== NFT Preview Card Styles ===== */
+
+/* Card wrapper */
+.card {
+  background-color: hsl(216, 50%, 16%);
+  border-radius: 16px;
+  padding: 24px;
+  max-width: 350px;
+  width: 100%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), 0 0 40px rgba(0, 255, 247, 0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.5), 0 0 50px rgba(0, 255, 247, 0.05);
+}
+
+/* Image section */
+.card__images {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.card__images img {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+  transition: transform 0.4s ease;
+}
+
+/* Hover overlay */
+.card__images-layer {
+  position: absolute;
+  inset: 0;
+  background-color: hsla(178, 100%, 50%, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 12px;
+  z-index: 1;
+}
+
+.card__images-layer svg {
+  width: 48px;
+  height: 48px;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+}
+
+.card__images:hover .card__images-layer {
+  opacity: 1;
+}
+
+.card__images:hover img {
+  transform: scale(1.05);
+}
+
+/* Title */
+.card__title {
+  margin-top: 22px;
+}
+
+.card__title h1 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: hsl(0, 0%, 100%);
+  margin: 0;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  letter-spacing: 0;
+}
+
+.card__title h1:hover {
+  color: hsl(178, 100%, 50%);
+}
+
+.card__title p {
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: hsl(215, 51%, 70%);
+  line-height: 1.6;
+  margin: 12px 0 0 0;
+}
+
+/* Price & time row */
+.card__time {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 18px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid hsl(215, 32%, 27%);
+}
+
+.card__time-left {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: hsl(178, 100%, 50%);
+}
+
+.card__time-left svg {
+  width: 11px;
+  height: 18px;
+}
+
+.card__time-right {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: hsl(215, 51%, 70%);
+}
+
+.card__time-right svg {
+  width: 17px;
+  height: 17px;
+}
+
+/* Creator section */
+.card__creator {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.card__creator img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid hsl(0, 0%, 100%);
+  object-fit: cover;
+}
+
+.card__creator p {
+  font-family: 'Outfit', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: hsl(215, 51%, 70%);
+  margin: 0;
+}
+
+.card__creator p span {
+  color: hsl(0, 0%, 100%);
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.card__creator p span:hover {
+  color: hsl(178, 100%, 50%);
+}
+
+/* Attribution footer */
+.attribution {
+  margin-top: 28px;
+  text-align: center;
+  font-family: 'Outfit', sans-serif;
+  font-size: 13px;
+  color: hsl(215, 51%, 70%);
+}
+
+.attribution a {
+  color: hsl(178, 100%, 50%);
+  text-decoration: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.attribution a:hover {
+  color: hsl(178, 100%, 70%);
+  text-shadow: 0 0 8px hsla(178, 100%, 50%, 0.4);
+}
